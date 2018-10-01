@@ -72,6 +72,8 @@ export let AubsDropdownCustomAttribute = (_dec = inject(Element), _dec2 = bindab
 
     attached() {
         this.isAttached = true;
+        this.rootNode = this.element.getRootNode();
+
         this.setClass();
 
         this.setListener();
@@ -79,13 +81,13 @@ export let AubsDropdownCustomAttribute = (_dec = inject(Element), _dec2 = bindab
 
     setListener() {
         if (this.autoClose !== 'disabled') {
-            document.addEventListener('click', this.outsideClickListener);
+            this.rootNode.addEventListener('click', this.outsideClickListener);
         }
     }
 
     detached() {
         if (this.autoClose !== 'disabled') {
-            document.removeEventListener('click', this.outsideClickListener);
+            this.rootNode.removeEventListener('click', this.outsideClickListener);
         }
     }
 

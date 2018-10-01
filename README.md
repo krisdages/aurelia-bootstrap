@@ -1,10 +1,13 @@
 ### Bootstrap Component for Aurelia
+This is a fork of Hector Romero's aurelia-bootstrap plugin.
+It currently contains some bugfixes in the dropdown plugin to handle
+dropdowns inside Shadow DOM. 
 
-Aurelia Bootstrap is a series of Custom Element and Custom Attributes that provide Bootstrap components native to Aurelia.
-Please check our documentation for installation details and the reference manual:
-#### https://tochoromero.github.io/aurelia-bootstrap/
+There is no separate documentation for this fork (sorry).
 
-### Avilable Components:
+Please visit the [project page](http://tochoromero.github.com/aurelia-bootstrap) for the documentation and examples.
+
+### Available Components:
 * Accordion
 * Buttons
 * Collapse
@@ -16,7 +19,12 @@ Please check our documentation for installation details and the reference manual
 * Typeahead
 
 ### Release Notes
+##### Fork by Kris Dages
+#### 0.1.21-prerelease
+Dropdown: Attach outside click listener to `element.getRootNode()` instead of `document`.
 
+##### Pre-fork
+###
 #### 0.1.20
 Custom HTML templates for typeahead.
 

@@ -94,6 +94,8 @@ System.register(["aurelia-framework", "../utils/bootstrap-options"], function (_
 
                 AubsDropdownCustomAttribute.prototype.attached = function attached() {
                     this.isAttached = true;
+                    this.rootNode = this.element.getRootNode();
+
                     this.setClass();
 
                     this.setListener();
@@ -101,13 +103,13 @@ System.register(["aurelia-framework", "../utils/bootstrap-options"], function (_
 
                 AubsDropdownCustomAttribute.prototype.setListener = function setListener() {
                     if (this.autoClose !== 'disabled') {
-                        document.addEventListener('click', this.outsideClickListener);
+                        this.rootNode.addEventListener('click', this.outsideClickListener);
                     }
                 };
 
                 AubsDropdownCustomAttribute.prototype.detached = function detached() {
                     if (this.autoClose !== 'disabled') {
-                        document.removeEventListener('click', this.outsideClickListener);
+                        this.rootNode.removeEventListener('click', this.outsideClickListener);
                     }
                 };
 

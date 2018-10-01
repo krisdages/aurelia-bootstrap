@@ -11,6 +11,8 @@ export class AubsDropdownCustomAttribute {
     state;
     showClass;
 
+    rootNode;
+
     constructor(element) {
         this.element = element;
 
@@ -29,6 +31,8 @@ export class AubsDropdownCustomAttribute {
 
     attached() {
         this.isAttached = true;
+        this.rootNode = this.element.getRootNode();
+
         this.setClass();
 
         this.setListener();
@@ -36,13 +40,13 @@ export class AubsDropdownCustomAttribute {
 
     setListener(){
         if (this.autoClose !== 'disabled') {
-            document.addEventListener('click', this.outsideClickListener)
+            this.rootNode.addEventListener('click', this.outsideClickListener)
         }
     }
 
     detached() {
         if (this.autoClose !== 'disabled') {
-            document.removeEventListener('click', this.outsideClickListener);
+            this.rootNode.removeEventListener('click', this.outsideClickListener);
         }
     }
 

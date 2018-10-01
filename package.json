@@ -1,6 +1,6 @@
 {
   "name": "aurelia-bootstrap",
-  "version": "0.1.20",
+  "version": "0.1.21-prerelease",
   "description": "Bootstrap components written in Aurelia.",
   "keywords": [
     "aurelia",
@@ -32,16 +32,16 @@
       ]
     }
   },
-  "homepage": "https://github.com/tochoromero/aurelia-bootstrap",
+  "homepage": "https://github.com/krisdages/aurelia-bootstrap",
   "bugs": {
-    "url": "https://github.com/tochoromero/aurelia-bootstrap/issues"
+    "url": "https://github.com/krisdages/aurelia-bootstrap/issues"
   },
   "license": "MIT",
-  "author": "Hector Romero",
+  "author": "Kris Dages",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/tochoromero/aurelia-bootstrap"
+    "url": "http://github.com/krisdages/aurelia-bootstrap"
   },
   "dependencies": {
     "aurelia-pal": "^1.3.0",
