@@ -301,6 +301,7 @@ export let AubsTypeaheadCustomElement = (_dec = inject(BindingEngine), _dec2 = b
         }
 
         setTimeout(() => {
+            if (this.dropdown == null) return;
             if (!this.dropdown.contains(evt.target)) {
                 this.dropdown.classList.remove(this.showClass);
                 this.focusNone();

@@ -245,6 +245,8 @@ export class AubsTypeaheadCustomElement {
         }
 
         setTimeout(() => {
+            if (this.dropdown == null)
+                return;
             if (!this.dropdown.contains(evt.target)) {
                 this.dropdown.classList.remove(this.showClass);
                 this.focusNone();

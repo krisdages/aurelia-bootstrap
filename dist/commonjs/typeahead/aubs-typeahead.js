@@ -336,6 +336,7 @@ var AubsTypeaheadCustomElement = exports.AubsTypeaheadCustomElement = (_dec = (0
         }
 
         setTimeout(function () {
+            if (_this7.dropdown == null) return;
             if (!_this7.dropdown.contains(evt.target)) {
                 _this7.dropdown.classList.remove(_this7.showClass);
                 _this7.focusNone();
