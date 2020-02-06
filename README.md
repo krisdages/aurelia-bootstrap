@@ -20,6 +20,13 @@ Please visit the [project page](http://tochoromero.github.com/aurelia-bootstrap)
 
 ### Release Notes
 ##### Fork by Kris Dages
+
+#### 0.1.24-prerelease
+Tooltip, Popover: Fixed "The node to be removed is not a child of this node" error
+
+#### 0.1.23-prerelease
+Typeahead: Fix error in blur handler
+
 #### 0.1.21-prerelease
 Dropdown: Attach outside click listener to `element.getRootNode()` instead of `document`.
 
