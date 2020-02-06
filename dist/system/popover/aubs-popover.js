@@ -285,8 +285,8 @@ System.register(["aurelia-framework", "../utils/tooltip-service", "../utils/boot
                             this.popover.appendChild(arrow);
                         }
                     } else {
-                        if (this.popover) {
-                            document.body.removeChild(this.popover);
+                        if (this.popover && this.popover.parentElement != null) {
+                            this.popover.parentElement.removeChild(this.popover);
                         }
 
                         this.popover = document.createElement('div');

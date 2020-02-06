@@ -282,8 +282,8 @@ var AubsPopoverCustomAttribute = exports.AubsPopoverCustomAttribute = (_dec = (0
                 this.popover.appendChild(arrow);
             }
         } else {
-            if (this.popover) {
-                document.body.removeChild(this.popover);
+            if (this.popover && this.popover.parentElement != null) {
+                this.popover.parentElement.removeChild(this.popover);
             }
 
             this.popover = document.createElement('div');

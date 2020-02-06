@@ -283,8 +283,8 @@ define(["exports", "aurelia-framework", "../utils/tooltip-service", "../utils/bo
                     this.popover.appendChild(arrow);
                 }
             } else {
-                if (this.popover) {
-                    document.body.removeChild(this.popover);
+                if (this.popover && this.popover.parentElement != null) {
+                    this.popover.parentElement.removeChild(this.popover);
                 }
 
                 this.popover = document.createElement('div');

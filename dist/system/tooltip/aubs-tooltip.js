@@ -129,8 +129,8 @@ System.register(['aurelia-framework', '../utils/tooltip-service', '../utils/boot
                 AubsTooltipCustomAttribute.prototype.detached = function detached() {
                     this.tooltipService.removeTriggers(this.element, this.triggers, this.listeners);
 
-                    if (this.tooltip) {
-                        document.body.removeChild(this.tooltip);
+                    if (this.tooltip && this.tooltip.parentElement != null) {
+                        this.tooltip.parentElement.removeChild(this.tooltip);
                     }
 
                     if (this.tether) {
@@ -225,8 +225,8 @@ System.register(['aurelia-framework', '../utils/tooltip-service', '../utils/boot
                 AubsTooltipCustomAttribute.prototype.createTooltip = function createTooltip() {
                     var _this4 = this;
 
-                    if (this.tooltip) {
-                        document.body.removeChild(this.tooltip);
+                    if (this.tooltip && this.tooltip.parentElement != null) {
+                        this.tooltip.parentElement.removeChild(this.tooltip);
                     }
 
                     this.tooltip = document.createElement('div');
