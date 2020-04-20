@@ -151,11 +151,11 @@ export class AubsTooltipCustomAttribute {
         this.tooltip = document.createElement('div');
         this.parseClassList().forEach(next => this.tooltip.classList.add(next.trim()));
 
-        this.tooltip.classList.add((bootstrapOptions.version === 4 ? 'tooltip-' : '') + this.position);
+        this.tooltip.classList.add((bootstrapOptions.version === 4 ? 'bs-tooltip-' : '') + this.position);
         this.tooltip.setAttribute('role', 'tooltip');
 
         let arrow = document.createElement('div');
-        arrow.classList.add('tooltip-arrow');
+        arrow.classList.add((bootstrapOptions.version === 4 ? 'arrow' : 'tooltip-arrow'));
         this.tooltip.appendChild(arrow);
 
         this.body = document.createElement('div');

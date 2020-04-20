@@ -232,11 +232,11 @@ define(['exports', 'aurelia-framework', '../utils/tooltip-service', '../utils/bo
                 return _this4.tooltip.classList.add(next.trim());
             });
 
-            this.tooltip.classList.add((_bootstrapOptions.bootstrapOptions.version === 4 ? 'tooltip-' : '') + this.position);
+            this.tooltip.classList.add((_bootstrapOptions.bootstrapOptions.version === 4 ? 'bs-tooltip-' : '') + this.position);
             this.tooltip.setAttribute('role', 'tooltip');
 
             var arrow = document.createElement('div');
-            arrow.classList.add('tooltip-arrow');
+            arrow.classList.add(_bootstrapOptions.bootstrapOptions.version === 4 ? 'arrow' : 'tooltip-arrow');
             this.tooltip.appendChild(arrow);
 
             this.body = document.createElement('div');
